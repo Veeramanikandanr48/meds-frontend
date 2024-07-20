@@ -114,7 +114,7 @@ const Header = ({
   <p className="text-[0.9rem] text-gray-600">
     {cartItemCount === 0 ? "Empty" : cartItemCount}
   </p>
-  <button className="bg-blue-500 p-2 text-[0.8rem] border-blue-500 text-white">
+  <button className="bg-blue-500 px-3 py-2 text-[0.8rem] rounded-circle border-blue-500 text-white">
     <Link to="/cart">View Cart</Link>
   </button>
 </div>

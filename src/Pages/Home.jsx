@@ -52,9 +52,9 @@ const Home = ({ selectedLetter, searchValue }) => {
       </div>
       {chatbotOpen && (
         <div className="fixed bottom-0 right-0 z-50 p-4">
-            <div className="p-4">
-              <SimpleForm/>
-            </div>
+          <div className="p-4 bg-white shadow-lg rounded-lg relative">
+            <SimpleForm closeChatbot={toggleChatbot} />
+          </div>
         </div>
       )}
     </Layout>
@@ -87,20 +87,21 @@ const ProductGrid = ({ products, selectedCategory }) => (
 const ProductCard = ({ product }) => (
   <div className="product-card border rounded-lg overflow-hidden w-auto">
     <div className="p-3">
-      <Link to={`/product/${product._id}`}><h1 className="text-sm font-semibold mb-2">{product.Name}</h1></Link>
+      <Link to={`/product/${product._id}`}>
+        <h1 className="text-sm font-semibold mb-2">{product.Name}</h1>
+      </Link>
       <div className="flex justify-center">
-        <Link to={`/product/${product._id}`}><img src={product.URL} alt={product.name} title={product.name} className="w-auto h-auto mb-2" /></Link>
+        <Link to={`/product/${product._id}`}>
+          <img src={product.URL} alt={product.name} title={product.name} className="w-auto h-auto mb-2" />
+        </Link>
       </div>
-      <p className="text-xs text-blue-400 mb-2">{product.packaging}</p>
-      <div className="flex justify-between items-center">
+      <p className="text-xs text-blue-400 mb-2 flex justify-center">{product.packaging}</p>
+      <div className="flex justify-center">
         <Link to={`/product/${product._id}`} className="px-2 py-1 text-xs text-white bg-blue-500 rounded-md">
           <span className="hidden sm:inline">SELECT PACK</span>
           <span className="sm:hidden">Select</span>
         </Link>
       </div>
-      <p className="mt-2 text-xs text-red-600">
-        Manufacturer's Suggested Retail Price {product["Original price1"]}
-      </p>
     </div>
   </div>
 );
