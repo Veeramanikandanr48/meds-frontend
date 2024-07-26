@@ -260,13 +260,9 @@ const Cart = ({ updateCartItemNumber }) => {
                     to={`/product/${product._id}`}
                     className="px-2 py-1 text-xs text-white bg-blue-500 rounded-md"
                   >
-                    SELECT PACK
+                    SELECT
                   </Link>
                 </div>
-                <p className="mt-2 text-xs text-red-600">
-                  Manufacturer's Suggested Retail Price{" "}
-                  {product["Original price1"]}
-                </p>
               </div>
             ))}
           </div>
