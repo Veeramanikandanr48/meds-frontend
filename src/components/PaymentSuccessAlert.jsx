@@ -13,7 +13,7 @@ const PaymentSuccessAlert = ({ show, onClose }) => {
           title="Payment Successful!"
           onConfirm={() => onClose(false)} // Close the alert when confirmed
         >
-          Order Placed successfully. We'll contact you soon.
+          Order Placed successfully. Our customer team will contact you soon.
         </SweetAlert>
       );
 
