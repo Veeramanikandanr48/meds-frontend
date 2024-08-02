@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import Logo from '../../src/media/logo - Copy.png';
+import Logo from "../../src/media/logo.png";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Header = ({
@@ -24,14 +24,41 @@ const Header = ({
   }, []);
 
   const categories = [
-    "Bestsellers", "COVID-19", "Allergy", "Anti Viral", "Anti-Depressants",
-    "Antibacterial", "Antibiotics", "Arthritis", "Asthma", "Birth Control",
-    "Cancer", "Blood Pressure", "Cholesterol", "Cardiovascular", "Diabetes",
-    "Diuretics", "Erectile Dysfunction", "Eye Drop", "Gastro Health", "Hair Loss",
-    "General Health", "Hepatitis C Virus (HCV)", "Herbals", "Hormones", "HIV",
-    "Men's ED Packs", "Men's Health", "Mental Illness", "Motion Sickness",
-    "Muscle Relaxant", "Pain Relief", "Quit Smoking", "Skin Care", "Women's Health",
-    "Weight Loss"
+    "Bestsellers",
+    "COVID-19",
+    "Allergy",
+    "Anti Viral",
+    "Anti-Depressants",
+    "Antibacterial",
+    "Antibiotics",
+    "Arthritis",
+    "Asthma",
+    "Birth Control",
+    "Cancer",
+    "Blood Pressure",
+    "Cholesterol",
+    "Cardiovascular",
+    "Diabetes",
+    "Diuretics",
+    "Erectile Dysfunction",
+    "Eye Drop",
+    "Gastro Health",
+    "Hair Loss",
+    "General Health",
+    "Hepatitis C Virus (HCV)",
+    "Herbals",
+    "Hormones",
+    "HIV",
+    "Men's ED Packs",
+    "Men's Health",
+    "Mental Illness",
+    "Motion Sickness",
+    "Muscle Relaxant",
+    "Pain Relief",
+    "Quit Smoking",
+    "Skin Care",
+    "Women's Health",
+    "Weight Loss",
   ];
 
   useEffect(() => {
@@ -61,13 +88,7 @@ const Header = ({
         {/* Logo */}
         <Link to="/">
           <div className="logo">
-            <img
-              src={Logo}
-              width={270}
-              height={100}
-              quality={100}
-              alt="logo"
-            />
+            <img src={Logo} width={270} height={80} quality={80} alt="logo" />
           </div>
         </Link>
         {/* Search input */}
@@ -111,14 +132,13 @@ const Header = ({
           </h2>
           {/* Cart items */}
           <div className="data flex flex-col items-center gap-2">
-  <p className="text-[0.9rem] text-gray-600">
-    {cartItemCount === 0 ? "Empty" : cartItemCount}
-  </p>
-  <button className="bg-blue-500 px-3 py-2 text-[0.8rem] rounded-circle border-blue-500 text-white">
-    <Link to="/cart">View Cart</Link>
-  </button>
-</div>
-
+            <p className="text-[0.9rem] text-gray-600">
+              {cartItemCount === 0 ? "Empty" : cartItemCount}
+            </p>
+            <button className="bg-blue-500 px-3 py-2 text-[0.8rem] rounded-circle border-blue-500 text-white">
+              <Link to="/cart">View Cart</Link>
+            </button>
+          </div>
         </div>
       </div>
       {/* Mobile Header */}

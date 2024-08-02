@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import SweetAlert from 'react-bootstrap-sweetalert';
+import React, { useState } from "react";
+import SweetAlert from "react-bootstrap-sweetalert";
 
 const PaymentSuccessAlert = ({ show, onClose }) => {
   const [alert, setAlert] = useState(null);
@@ -10,10 +10,10 @@ const PaymentSuccessAlert = ({ show, onClose }) => {
       const successAlert = (
         <SweetAlert
           success
-          title="Payment Successful!"
+          title="Order Placed successfully!"
           onConfirm={() => onClose(false)} // Close the alert when confirmed
         >
-          Order Placed successfully. Our customer team will contact you soon.
+          Our customer team will contact you soon.
         </SweetAlert>
       );
 

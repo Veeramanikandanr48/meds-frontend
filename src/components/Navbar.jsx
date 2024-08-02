@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from '../../src/media/logo - Copy.png';
+import logo from "../../src/media/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          
+
           {/* Desktop NavItems */}
           <div className="hidden lg:flex items-center">
             <NavItem to="/">Home</NavItem>
@@ -48,28 +48,27 @@ const Navbar = () => {
           {/* Mobile Logo */}
           <div className="flex items-center justify-center w-full lg:w-auto lg:flex-shrink-0">
             <Link to="/">
-              <img
-                src={logo}
-                width={100}
-                height={100}
-                alt="logo"
-              />
+              <img src={logo} width={100} height={100} alt="logo" />
             </Link>
           </div>
 
           {/* Cart Icon for Mobile */}
           <div className="flex-shrink-0 lg:hidden text-right pr-3">
             <Link to="/cart" className="text-white hover:text-gray-300">
-            <img width="35" height="35" src="https://img.icons8.com/officel/80/add-shopping-cart.png" alt="add-shopping-cart"/>
+              <img
+                width="35"
+                height="35"
+                src="https://img.icons8.com/officel/80/add-shopping-cart.png"
+                alt="add-shopping-cart"
+              />
             </Link>
           </div>
-
-          
 
           {/* Additional Items for Desktop */}
           <ul className="hidden lg:flex items-center gap-8">
             <li className="text-sm font-medium">
-              US Toll Free: <span className="text-green-500">+1 888 524 7161</span>
+              US Toll Free:{" "}
+              <span className="text-green-500">+1 888 524 7161</span>
             </li>
             <li className="text-sm font-medium text-green-500 hover:text-gray-400 transition duration-300">
               Live Chat Online
@@ -112,10 +111,18 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <ul className="text-white text-xs flex flex-col items-center p-3 list-none">
-              <NavItem to="/" onClick={toggleMenu}>Home</NavItem>
-              <NavItem to="/category/offer" onClick={toggleMenu}>Offers</NavItem>
-              <NavItem to="/faq" onClick={toggleMenu}>FAQ</NavItem>
-              <NavItem to="/contact-us" onClick={toggleMenu}>Contact Us</NavItem>
+              <NavItem to="/" onClick={toggleMenu}>
+                Home
+              </NavItem>
+              <NavItem to="/category/offer" onClick={toggleMenu}>
+                Offers
+              </NavItem>
+              <NavItem to="/faq" onClick={toggleMenu}>
+                FAQ
+              </NavItem>
+              <NavItem to="/contact-us" onClick={toggleMenu}>
+                Contact Us
+              </NavItem>
             </ul>
           </div>
         </div>

@@ -13,7 +13,9 @@ const Home = ({ selectedLetter, searchValue }) => {
   const [error, setError] = useState(null);
   const [chatbotOpen, setChatbotOpen] = useState(false);
 
-  let endpoint = selectedLetter ? `products/letter/${selectedLetter}` : `categories/${selectedCategory}`;
+  let endpoint = selectedLetter
+    ? `products/letter/${selectedLetter}`
+    : `categories/${selectedCategory}`;
   if (searchValue) {
     endpoint = `products/name/${searchValue}`;
   }
@@ -41,12 +43,21 @@ const Home = ({ selectedLetter, searchValue }) => {
         <Carousel />
         <div className="relative flex-1">
           {loading && <LoadingSpinner />}
-          {!loading && !error && <ProductGrid key={selectedCategory} products={selectedProducts} selectedCategory={selectedCategory} />}
+          {!loading && !error && (
+            <ProductGrid
+              key={selectedCategory}
+              products={selectedProducts}
+              selectedCategory={selectedCategory}
+            />
+          )}
           {error && <ErrorMessage error={error} />}
         </div>
       </div>
       <div className="fixed bottom-8 right-8 z-50">
-        <button onClick={toggleChatbot} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full flex items-center">
+        <button
+          onClick={toggleChatbot}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full flex items-center"
+        >
           {chatbotOpen ? "Close Chatbot" : "Open Chatbot"}
         </button>
       </div>
@@ -92,12 +103,25 @@ const ProductCard = ({ product }) => (
       </Link>
       <div className="flex justify-center">
         <Link to={`/product/${product._id}`}>
-          <img src={product.URL} alt={product.name} title={product.name} className="w-auto h-auto mb-2" />
+          <img
+            src={product.URL}
+            alt={product.name}
+            title={product.name}
+            className="w-auto h-auto mb-2"
+          />
         </Link>
       </div>
-      <p className="text-xs text-blue-400 mb-2 flex justify-center">{product.packaging}</p>
+      <p className="text-xs text-blue-400 mb-2 flex justify-center">
+        {product.packaging}
+      </p>
+      <p className="text-xs text-red-400 mb-2 flex justify-center">
+        Best price guaranteed
+      </p>
       <div className="flex justify-center">
-        <Link to={`/product/${product._id}`} className="px-2 py-1 text-xs text-white bg-blue-500 rounded-md">
+        <Link
+          to={`/product/${product._id}`}
+          className="px-2 py-1 text-xs text-white bg-blue-500 rounded-md"
+        >
           <span className="hidden sm:inline">SELECT PACK</span>
           <span className="sm:hidden">Select</span>
         </Link>
