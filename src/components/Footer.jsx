@@ -18,29 +18,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Our Policy, Terms & Conditions, Sitemap */}
-          <div className="text-sm">
-            <ul className="list-none">
-              <li>Our Policy</li>
-              <li>Terms & Conditions</li>
-              <li>Sitemap</li>
-            </ul>
-          </div>
-
-          {/* Payment Options */}
-          <div className="text-xs">
-            <p className="font-bold">Payment Options</p>
-            <img src={payment} width={200} height={40} alt="payment" className="mt-2 mx-auto" />
-            <p className="text-xs text-secondary mt-2">Products are not appeared on your credit card statement</p>
-          </div>
-
-          {/* Secure Payment Process */}
-          <div className="text-xs">
-            <p className="font-bold">Secure Payment Process</p>
-            <img src={securePay} width={200} height={40} alt="secure_payment" className="mt-2 mx-auto" />
-            <p className="text-xs text-secondary mt-2">See links to the certificates at Secure Checkout Page</p>
-          </div>
-
           {/* Mobile Version (Hidden in Mobile View) */}
           <div className="hidden md:block">
           <Link to="/contact-us" className="block w-75 border border-blue-500 bg-blue-500 text-white font-bold py-2 px-2 rounded-full text-center mt-4 hover:bg-blue-700 hover:border-blue-700">
