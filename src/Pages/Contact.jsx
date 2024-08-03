@@ -16,7 +16,7 @@ const ContactFormWithInfo = () => {
   };
 
   const emailContent = {
-    recipient: "contact@budgetmeds.com",
+    recipient: "info@medsforhim.com",
     subject: "Message from Contact Form",
     body: "Dear recipient,\n\nI am writing to you regarding...",
   };
@@ -146,11 +146,11 @@ const ContactFormWithInfo = () => {
               </div>
               <div className="flex items-center mb-4">
                 <FaEnvelope className="text-gray-600 mr-2" />
-                <span className="text-gray-600">example@example.com</span>
+                <span className="text-gray-600">info@medsforhim.com</span>
               </div>
               <div className="flex items-center mb-4">
                 <FaMapMarkerAlt className="text-gray-600 mr-2" />
-                <span className="text-gray-600">123 Street, City, Country</span>
+                <span className="text-gray-600">10300 49th St N STE 427, Clearwater, FL, 33762</span>
               </div>
             </div>
           </aside>
