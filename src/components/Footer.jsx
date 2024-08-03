@@ -9,11 +9,6 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-5 text-sm text-left">
 
-          
-   
-
-          
-        Copy Right Section */}
         <div className="copy-right-sec mt-1">
           <p className="copy-right text-xs">Copyright © medsforhim.com. All rights reserved</p>
         </div>
