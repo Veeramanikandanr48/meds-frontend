@@ -28,7 +28,7 @@ const CarouselComponent = () => {
 
   return (
     <div className="carousel slide py-5" data-bs-ride="carousel" ref={carouselRef}>
-<Link to="">
+<Link to="/category/offer">
       <div className="carousel-inner">
         {images.map((imageUrl, index) => (
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
