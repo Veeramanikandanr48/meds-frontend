@@ -28,7 +28,7 @@ const Footer = () => {
 
         Copy Right Section */}
         <div className="copy-right-sec mt-1">
-          <p className="copy-right text-xs">Copyright © budgetmeds.com. All rights reserved</p>
+          <p className="copy-right text-xs">Copyright © medsforhim.com. All rights reserved</p>
         </div>
       </div>
     </footer>
