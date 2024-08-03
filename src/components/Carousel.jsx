@@ -29,18 +29,19 @@ const CarouselComponent = () => {
 
   return (
     <div className="carousel slide py-5" data-bs-ride="carousel" ref={carouselRef}>
-<Link to="/category/offer">
       <div className="carousel-inner">
         {images.map((imageUrl, index) => (
-          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-            <img
-              src={imageUrl}
-              alt={`Slide ${index + 1}`}
-              className="d-block w-100"
-            />
-          </div>
+          <Link to="/category/offer" key={index}>
+            <div className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+              <img
+                src={imageUrl}
+                alt={`Slide ${index + 1}`}
+                className="d-block w-100"
+              />
+            </div>
+          </Link>
         ))}
-      </div></Link>
+      </div>
       <button className="carousel-control-prev" type="button" data-bs-target=".carousel" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
