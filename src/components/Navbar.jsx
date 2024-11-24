@@ -31,6 +31,7 @@ const NavItem = ({ to, children, onClick }) => (
     to={to}
     onClick={onClick}
     className="block px-4 py-2 text-base font-medium text-white hover:text-gray-300 transition-colors"
+    style={{textDecoration: 'none', color: 'inherit'}}
   >
     {children}
   </Link>
@@ -53,7 +54,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/">
+            <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
               <img src={logo} alt="logo" className="h-12 w-auto" />
             </Link>
           </div>
@@ -69,14 +70,14 @@ const Navbar = () => {
           {/* Social Links & Cart - Desktop */}
           <div className="hidden lg:flex items-center space-x-6">
             <SocialLinks />
-            <Link to="/cart" className="text-white hover:text-gray-300">
+            <Link to="/cart" className="text-white hover:text-gray-300" style={{textDecoration: 'none', color: 'inherit'}}>
               <FaShoppingCart size={24} />
             </Link>
           </div>
 
           {/* Mobile Cart Icon */}
           <div className="lg:hidden">
-            <Link to="/cart" className="text-white hover:text-gray-300">
+            <Link to="/cart" className="text-white hover:text-gray-300" style={{textDecoration: 'none', color: 'inherit'}}>
               <FaShoppingCart size={24} />
             </Link>
           </div>

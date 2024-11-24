@@ -98,11 +98,11 @@ const ProductGrid = ({ products, selectedCategory }) => (
 const ProductCard = ({ product }) => (
   <div className="product-card border rounded-lg overflow-hidden w-auto">
     <div className="p-3">
-      <Link to={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`} style={{textDecoration: 'none', color: 'inherit'}}>
         <h1 className="text-sm font-semibold mb-2">{product.Name}</h1>
       </Link>
       <div className="flex justify-center">
-        <Link to={`/product/${product._id}`}>
+        <Link to={`/product/${product._id}`} style={{textDecoration: 'none', color: 'inherit'}}>
           <img
             src={product.URL}
             alt={product.name}
@@ -121,6 +121,7 @@ const ProductCard = ({ product }) => (
         <Link
           to={`/product/${product._id}`}
           className="px-2 py-1 text-xs text-white bg-blue-500 rounded-md"
+          style={{textDecoration: 'none', color: 'inherit'}}
         >
           <span className="hidden sm:inline">SELECT PACK</span>
           <span className="sm:hidden">Select</span>

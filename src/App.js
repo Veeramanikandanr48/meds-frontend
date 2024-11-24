@@ -8,6 +8,10 @@ import Navbar from "./components/Navbar";
 import FAQPage from "./Pages/Faq";
 import CheckoutPage from "./Pages/Checkout";
 import ContactFormWithInfo from "./Pages/Contact";
+import Admin from "./Pages/Admin";
+import Categories from "./Pages/Categories";
+import Orders from "./Pages/Orders";
+import Users from "./Pages/Users";
 
 const App = () => {
   // State variables for selected letter and search value
@@ -61,6 +65,11 @@ const App = () => {
         {/* Route for checkout page */}
         <Route path="/checkout" element={<CheckoutPage/>}/>
         <Route path="/contact-us" element={<ContactFormWithInfo/>}/>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/products" element={<Admin />} />
+        <Route path="/admin/categories" element={<Categories />} />
+        <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/users" element={<Users />} />
       </Routes>
     </Router>
   );

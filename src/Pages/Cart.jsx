@@ -238,11 +238,11 @@ const Cart = ({ updateCartItemNumber }) => {
                 key={product.URL}
                 className="max-w-[300px] bg-white border rounded-md overflow-hidden shadow-md p-4"
               >
-                <Link to={`/product/${product._id}`}>
+                <Link to={`/product/${product._id}`} style={{textDecoration: 'none', color: 'inherit'}}>
                   <h1 className="text-sm font-semibold mb-2">{product.Name}</h1>
                 </Link>
                 <div className="flex justify-center">
-                  <Link to={`/product/${product._id}`}>
+                  <Link to={`/product/${product._id}`} style={{textDecoration: 'none', color: 'inherit'}}>
                     <img
                       src={product.URL}
                       alt={product.name}
@@ -260,6 +260,7 @@ const Cart = ({ updateCartItemNumber }) => {
                 <div className="flex justify-center">
                   <Link
                     to={`/product/${product._id}`}
+                    style={{textDecoration: 'none', color: 'inherit'}}
                     className="px-2 py-1 text-xs text-white bg-blue-500 rounded-md"
                   >
                     <span className="hidden sm:inline">SELECT PACK</span>

@@ -21,3 +21,13 @@ body {
   .product-card:hover {
     border-color: #4f46e5;
   }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  Link{
+    text-decoration: none;
+    color: inherit;
+  }
