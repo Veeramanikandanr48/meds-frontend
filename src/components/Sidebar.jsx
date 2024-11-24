@@ -60,7 +60,7 @@ const Sidebar = () => {
       >
         Contact Us
       </Link>
-      <h1 className="border-b py-2">Shipping option</h1>
+      <h1 className="border-b py-2 h6">Shipping option</h1>
       <img src={card_content} alt="card-c" className="mb-5"/>
     </div>
   );
