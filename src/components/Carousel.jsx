@@ -5,7 +5,7 @@ import { Carousel } from "bootstrap"; // Import Bootstrap Carousel
 const CarouselComponent = () => {
   const images = [
     "https://res.cloudinary.com/dpcfyn3si/image/upload/v1730551915/uploads/yjytm9pviownt45qkskb.jpg",
-    "https://res.cloudinary.com/dpcfyn3si/image/upload/v1730551916/uploads/vpgiuxgyvzzciqf3p6hi.jpg",
+    "https://res.cloudinary.com/dpcfyn3si/image/upload/v1734842245/kdzhi6ay5mimxyuismrn.png",
     "https://res.cloudinary.com/dpcfyn3si/image/upload/v1730551917/uploads/n1mra7hnkgiogq8lrskj.jpg",
   ];
 
