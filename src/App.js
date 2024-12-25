@@ -12,6 +12,8 @@ import Admin from "./Pages/Admin";
 import Categories from "./Pages/Categories";
 import Orders from "./Pages/Orders";
 import Users from "./Pages/Users";
+import OfferProductDetails from './Pages/OfferProductDetails';
+import OfferPage from "./Pages/OfferPage";
 
 const App = () => {
   // State variables for selected letter and search value
@@ -70,6 +72,8 @@ const App = () => {
         <Route path="/admin/categories" element={<Categories />} />
         <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/users" element={<Users />} />
+        <Route path="/offer" element={<OfferPage />} />
+        <Route path="/offer/:productName" element={<OfferProductDetails />} />
       </Routes>
     </Router>
   );

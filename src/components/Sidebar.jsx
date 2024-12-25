@@ -7,13 +7,18 @@ const Sidebar = () => {
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("Bestsellers");
 
-  // Fetch categories from the API
+  // Fetch categories from the API and add static Offer category
   useEffect(() => {
     const fetchCategories = async () => {
       try {
         const response = await fetch(`${BACKEND_URL}admin/categories`);
         const data = await response.json();
-        setCategories(data);
+        // Add static Offer category at the beginning
+        const categoriesWithOffer = [
+          { name: "Offer", _id: "offer" },
+          ...data
+        ];
+        setCategories(categoriesWithOffer);
       } catch (error) {
         console.error('Error fetching categories:', error);
       }
@@ -24,6 +29,14 @@ const Sidebar = () => {
 
   const handleCategoryClick = (categoryName) => {
     setActiveCategory(categoryName);
+  };
+
+  // Function to get the link path based on category
+  const getCategoryLink = (category) => {
+    if (category.name === "Offer") {
+      return `/offer`; // Link to offer page instead of specific product
+    }
+    return `/category/${category.name}`;
   };
 
   return (
@@ -45,7 +58,7 @@ const Sidebar = () => {
               alt="folder-invoices"
             />
             <Link 
-              to={`/category/${category.name}`} 
+              to={getCategoryLink(category)}
               className={category.name === activeCategory ? 'font-bold' : ''} 
               style={{textDecoration: 'none', color: 'inherit'}}
             >

@@ -1,0 +1,359 @@
+{
+  "products": [
+    {
+      "_id": "offer1",
+      "URL": "https://safe-easy-online.com/content/160x120/levitra.jpg",
+      "Categories": "Offer",
+      "Name": "Levitra",
+      "packaging": "20mg",
+      "prices": [
+        {
+          "mg": "20mg",
+          "pills": [
+            {
+              "quantity": "250 Pills",
+              "price": "$299.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$1.20 per pill"
+            },
+            {
+              "quantity": "400 Pills",
+              "price": "$399.00",
+              "grossPrice": "$599.00",
+              "discountPrice": "$1.00 per pill"
+            },
+            {
+              "quantity": "500 Pills",
+              "price": "$449.00",
+              "grossPrice": "$749.00",
+              "discountPrice": "$0.90 per pill"
+            },
+            {
+              "quantity": "1000 Pills",
+              "price": "$749.00",
+              "grossPrice": "$949.00",
+              "discountPrice": "$0.75 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "40mg",
+          "pills": [
+            {
+              "quantity": "200 Pills",
+              "price": "$299.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$1.50 per pill"
+            },
+            {
+              "quantity": "300 Pills",
+              "price": "$399.00",
+              "grossPrice": "$599.00",
+              "discountPrice": "$1.33 per pill"
+            },
+            {
+              "quantity": "400 Pills",
+              "price": "$449.00",
+              "grossPrice": "$749.00",
+              "discountPrice": "$1.12 per pill"
+            },
+            {
+              "quantity": "800 Pills",
+              "price": "$749.00",
+              "grossPrice": "$949.00",
+              "discountPrice": "$0.94 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "60mg",
+          "pills": [
+            {
+              "quantity": "150 Pills",
+              "price": "$299.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$1.99 per pill"
+            },
+            {
+              "quantity": "250 Pills",
+              "price": "$399.00",
+              "grossPrice": "$599.00",
+              "discountPrice": "$1.60 per pill"
+            },
+            {
+              "quantity": "300 Pills",
+              "price": "$449.00",
+              "grossPrice": "$749.00",
+              "discountPrice": "$1.50 per pill"
+            },
+            {
+              "quantity": "600 Pills",
+              "price": "$749.00",
+              "grossPrice": "$949.00",
+              "discountPrice": "$1.25 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "80mg",
+          "pills": [
+            {
+              "quantity": "100 Pills",
+              "price": "$299.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$2.99 per pill"
+            },
+            {
+              "quantity": "200 Pills",
+              "price": "$399.00",
+              "grossPrice": "$599.00",
+              "discountPrice": "$2.00 per pill"
+            },
+            {
+              "quantity": "250 Pills",
+              "price": "$449.00",
+              "grossPrice": "$749.00",
+              "discountPrice": "$1.80 per pill"
+            },
+            {
+              "quantity": "500 Pills",
+              "price": "$749.00",
+              "grossPrice": "$949.00",
+              "discountPrice": "$1.50 per pill"
+            }
+          ]
+        }
+      ],
+      "Uses": "Levitra (Vardenafil) is used to treat erectile dysfunction (ED). It works by increasing blood flow to the penis during sexual stimulation.",
+      "PRODUCT DESCRIPTION": "Levitra is a prescription medication used to treat erectile dysfunction (ED). The active ingredient Vardenafil belongs to a class of drugs called phosphodiesterase type 5 (PDE5) inhibitors. Available in multiple strengths (20mg, 40mg, 60mg, 80mg) to suit individual needs.",
+      "bonus": ["Free Shipping", "Free Pills"]
+    },
+    {
+      "_id": "offer2",
+      "URL": "https://safe-easy-online.com/content/160x120/viagra.jpg",
+      "Categories": "Offer",
+      "Name": "Viagra",
+      "packaging": "100mg",
+      "prices": [
+        {
+          "mg": "100mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$199.00",
+              "grossPrice": "$229.00",
+              "discountPrice": "$0.80 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$299.00",
+              "grossPrice": "$349.00",
+              "discountPrice": "$0.75 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$349.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$0.70 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$599.00",
+              "grossPrice": "$699.00",
+              "discountPrice": "$0.60 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "150mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$229.00",
+              "grossPrice": "$269.00",
+              "discountPrice": "$0.92 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$349.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$0.87 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$399.00",
+              "grossPrice": "$449.00",
+              "discountPrice": "$0.80 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$649.00",
+              "grossPrice": "$749.00",
+              "discountPrice": "$0.65 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "200mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$249.00",
+              "grossPrice": "$299.00",
+              "discountPrice": "$1.00 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$379.00",
+              "grossPrice": "$429.00",
+              "discountPrice": "$0.95 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$429.00",
+              "grossPrice": "$479.00",
+              "discountPrice": "$0.86 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$699.00",
+              "grossPrice": "$799.00",
+              "discountPrice": "$0.70 per pill"
+            }
+          ]
+        }
+      ],
+      "Uses": "Viagra (Sildenafil) is used to treat erectile dysfunction (ED) and has been helping millions of men around the world achieve and maintain erections.",
+      "PRODUCT DESCRIPTION": "Viagra contains Sildenafil citrate and is the world's most popular medication for treating erectile dysfunction (ED). Available in multiple strengths (100mg, 150mg, 200mg) to suit different needs.",
+      "bonus": ["Free Shipping", "Free Pills", "Discreet Package"]
+    },
+    {
+      "_id": "offer3",
+      "URL": "https://safe-easy-online.com/content/160x120/cialis.jpg",
+      "Categories": "Offer",
+      "Name": "Cialis",
+      "packaging": "20mg",
+      "prices": [
+        {
+          "mg": "20mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$199.00",
+              "grossPrice": "$229.00",
+              "discountPrice": "$0.80 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$299.00",
+              "grossPrice": "$349.00",
+              "discountPrice": "$0.75 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$349.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$0.70 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$599.00",
+              "grossPrice": "$699.00",
+              "discountPrice": "$0.60 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "40mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$229.00",
+              "grossPrice": "$269.00",
+              "discountPrice": "$0.92 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$349.00",
+              "grossPrice": "$399.00",
+              "discountPrice": "$0.87 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$399.00",
+              "grossPrice": "$449.00",
+              "discountPrice": "$0.80 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$649.00",
+              "grossPrice": "$749.00",
+              "discountPrice": "$0.65 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "60mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$249.00",
+              "grossPrice": "$299.00",
+              "discountPrice": "$1.00 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$379.00",
+              "grossPrice": "$429.00",
+              "discountPrice": "$0.95 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$429.00",
+              "grossPrice": "$479.00",
+              "discountPrice": "$0.86 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$699.00",
+              "grossPrice": "$799.00",
+              "discountPrice": "$0.70 per pill"
+            }
+          ]
+        },
+        {
+          "mg": "80mg",
+          "pills": [
+            {
+              "quantity": "250 pills",
+              "price": "$299.00",
+              "grossPrice": "$349.00",
+              "discountPrice": "$1.20 per pill"
+            },
+            {
+              "quantity": "400 pills",
+              "price": "$399.00",
+              "grossPrice": "$449.00",
+              "discountPrice": "$1.00 per pill"
+            },
+            {
+              "quantity": "500 pills",
+              "price": "$449.00",
+              "grossPrice": "$499.00",
+              "discountPrice": "$0.90 per pill"
+            },
+            {
+              "quantity": "1000 pills",
+              "price": "$749.00",
+              "grossPrice": "$849.00",
+              "discountPrice": "$0.75 per pill"
+            }
+          ]
+        }
+      ],
+      "Uses": "Cialis (Tadalafil) is used to treat erectile dysfunction (ED) and is known as the 'weekend pill' due to its long-lasting effects of up to 36 hours.",
+      "PRODUCT DESCRIPTION": "Cialis is a medication containing Tadalafil that treats erectile dysfunction (ED). Available in multiple strengths (20mg, 40mg, 60mg, 80mg) to suit individual needs.",
+      "bonus": ["Free Shipping", "Free Pills", "Discreet Package"]
+    }
+  ]
+} 
