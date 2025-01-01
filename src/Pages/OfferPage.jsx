@@ -40,11 +40,11 @@ const OfferPage = () => {
                     <div className="d-flex justify-content-between align-items-center">
                       <div>
                         <span className="text-muted text-decoration-line-through">
-                          {product.prices[0].pills[0].discountPrice}
+                          {product.prices[0].pills[0].grossprice}
                         </span>
                         <br />
                         <span className="text-success fw-bold">
-                          From {product.prices[0].pills[0].price}
+                          From {product.prices[0].pills[0].discountPrice}
                         </span>
                       </div>
                       <Link
