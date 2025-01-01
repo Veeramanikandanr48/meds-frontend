@@ -40,7 +40,7 @@ const OfferPage = () => {
                     <div className="d-flex justify-content-between align-items-center">
                       <div>
                         <span className="text-muted text-decoration-line-through">
-                          {product.prices[0].pills[0].grossPrice}
+                          {product.prices[0].pills[0].discountPrice}
                         </span>
                         <br />
                         <span className="text-success fw-bold">
