@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 import parcel_en from "../media/parcel_en.png";
@@ -16,17 +16,33 @@ const OfferProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [selectedMg, setSelectedMg] = useState(null);
   const { productName } = useParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     const foundProduct = offerProducts.products.find(
       p => p.Name.toLowerCase() === productName.toLowerCase()
     );
+    
     if (foundProduct) {
       setProduct(foundProduct);
-      setSelectedMg(foundProduct.prices[0].mg); // Set first mg as default
+      
+      // Get mg from URL query parameter
+      const mgFromUrl = searchParams.get('mg');
+      
+      // Check if the mg from URL exists in product prices
+      const validMg = mgFromUrl && foundProduct.prices.some(p => p.mg === mgFromUrl);
+      
+      // Set selected mg from URL or default to first available mg
+      setSelectedMg(validMg ? mgFromUrl : foundProduct.prices[0].mg);
     }
-  }, [productName]);
+  }, [productName, searchParams]);
+
+  // Update URL when mg is changed
+  const handleMgChange = (mg) => {
+    setSelectedMg(mg);
+    navigate(`/offer/${productName}?mg=${mg}`, { replace: true });
+  };
 
   const handleRowClick = (rowData) => {
     let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -86,11 +102,11 @@ const OfferProductDetails = () => {
             <div className="row mt-1 mb-4">
               <div className="col-12">
                 <span className="title-doses">Select Doses:</span>
-                {product.prices.map((price, index) => (
+                {product?.prices.map((price, index) => (
                   <button 
                     key={index}
                     className={`btn ${selectedMg === price.mg ? 'btn-primary' : 'btn-secondary'} me-2`}
-                    onClick={() => setSelectedMg(price.mg)}
+                    onClick={() => handleMgChange(price.mg)}
                   >
                     {price.mg}
                   </button>

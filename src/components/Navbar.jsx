@@ -62,7 +62,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
             <NavItem to="/">Home</NavItem>
-            <NavItem to="/category/offer">Offers</NavItem>
+            <NavItem to="/offer">Offers</NavItem>
             <NavItem to="/faq">FAQ</NavItem>
             <NavItem to="/contact-us">Contact Us</NavItem>
           </div>

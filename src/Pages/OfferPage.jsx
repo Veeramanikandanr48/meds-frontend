@@ -4,6 +4,24 @@ import offerProducts from "../Data/offerProducts.json";
 import Layout from "../Layout";
 
 const OfferPage = () => {
+  // Helper function to find the lowest price for a product
+  const findLowestPrice = (prices) => {
+    let lowestPrice = Infinity;
+    let lowestDiscountPrice = '';
+    
+    prices.forEach(strength => {
+      strength.pills.forEach(pill => {
+        const priceValue = parseFloat(pill.discountPrice.replace('$', '').split(' ')[0]);
+        if (priceValue < lowestPrice) {
+          lowestPrice = priceValue;
+          lowestDiscountPrice = pill.discountPrice;
+        }
+      });
+    });
+    
+    return lowestDiscountPrice;
+  };
+
   return (
     <Layout>
       <div className="container mt-5">
@@ -28,23 +46,20 @@ const OfferPage = () => {
                       <span className="fw-bold">Available Strengths:</span>
                       <div className="d-flex flex-wrap gap-1 mt-1">
                         {product.prices.map((price, index) => (
-                          <span
+                          <Link
                             key={index}
-                            className="badge bg-secondary me-1"
+                            to={`/offer/${product.Name.toLowerCase()}?mg=${price.mg}`}
+                            className="badge bg-secondary me-1 text-decoration-none"
                           >
                             {price.mg}
-                          </span>
+                          </Link>
                         ))}
                       </div>
                     </div>
                     <div className="d-flex justify-content-between align-items-center">
                       <div>
-                        <span className="text-muted text-decoration-line-through">
-                          {product.prices[0].pills[0].grossPrice}
-                        </span>
-                        <br />
                         <span className="text-success fw-bold">
-                          From {product.prices[0].pills[0].discountPrice}
+                          Starting from {findLowestPrice(product.prices)}
                         </span>
                       </div>
                       <Link
