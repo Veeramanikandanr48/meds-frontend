@@ -2,17 +2,19 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../src/media/logo.png";
 import { FaShoppingCart } from "react-icons/fa";
+import BACKEND_URL from '../Data/config';
 
 const Header = ({
   handleLetterClick,
   onSearch,
-  cartItemCount, // New prop to receive cart item count
+  cartItemCount,
 }) => {
   const [cartItems, setCartItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Bestsellers");
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
+  const [categories, setCategories] = useState([]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -23,43 +25,25 @@ const Header = ({
     return JSON.parse(localStorage.getItem("cart")) || [];
   }, []);
 
-  const categories = [
-    "Bestsellers",
-    "COVID-19",
-    "Allergy",
-    "Anti Viral",
-    "Anti-Depressants",
-    "Antibacterial",
-    "Antibiotics",
-    "Arthritis",
-    "Asthma",
-    "Birth Control",
-    "Cancer",
-    "Blood Pressure",
-    "Cholesterol",
-    "Cardiovascular",
-    "Diabetes",
-    "Diuretics",
-    "Erectile Dysfunction",
-    "Eye Drop",
-    "Gastro Health",
-    "Hair Loss",
-    "General Health",
-    "Hepatitis C Virus (HCV)",
-    "Herbals",
-    "Hormones",
-    "HIV",
-    "Men's ED Packs",
-    "Men's Health",
-    "Mental Illness",
-    "Motion Sickness",
-    "Muscle Relaxant",
-    "Pain Relief",
-    "Quit Smoking",
-    "Skin Care",
-    "Women's Health",
-    "Weight Loss",
-  ];
+  // Fetch categories from the API
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch(`${BACKEND_URL}admin/categories`);
+        const data = await response.json();
+        // Add static Offer category at the beginning
+        const categoriesWithOffer = [
+          { name: "Offer", _id: "offer" },
+          ...data
+        ];
+        setCategories(categoriesWithOffer);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     const storedCartItems = getCartItemsFromLocalStorage();
@@ -184,18 +168,18 @@ const Header = ({
             <div className="absolute z-10 left-0 mt-2 w-full">
               <div className="bg-gray-800 rounded-md shadow-lg">
                 <div className="py-1">
-                  {/* Render categories */}
+                  {/* Render categories from API */}
                   {categories.map((category, index) => (
                     <Link
                       key={index}
-                      to={`/category/${category}`}
-                      onClick={() => handleCategoryClick(category)}
+                      to={`/category/${category.name}`}
+                      onClick={() => handleCategoryClick(category.name)}
                       className={`block px-4 py-2 text-sm text-white hover:bg-gray-700 ${
-                        selectedCategory === category ? "bg-gray-700" : ""
+                        selectedCategory === category.name ? "bg-gray-700" : ""
                       }`}
                       style={{ fontSize: "0.75rem", textDecoration: 'none', color: 'inherit' }}
                     >
-                      {category}
+                      {category.name}
                     </Link>
                   ))}
                 </div>
